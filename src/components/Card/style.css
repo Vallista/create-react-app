@@ -1,0 +1,85 @@
+.icon {
+  width: 50px;
+  height: 50px;
+}
+
+.card-wrapper {
+  width: 100vw;
+  margin-bottom: 48px;
+}
+
+.card-wrapper > .header {
+  box-sizing: border-box;
+  padding: 0 6px 0 6px;
+  margin-top: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.card-wrapper > .header > .left {
+  display: flex;
+}
+
+.card-wrapper > .header > .left > .profile {
+  border-radius: 50px;
+  margin-right: 6px;
+}
+
+.card-wrapper > .header > .left > .title {
+}
+
+.card-wrapper > .header > .more-button {
+}
+
+.card-wrapper > .cover {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.card-wrapper > .cover > .cover-img {
+  width: 100%;
+  height: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card-wrapper > .icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 12px 0 12px;
+}
+
+.card-wrapper > .icons > .left-icons {
+  display: flex;
+}
+
+.card-wrapper > .icons .icon {
+  border-radius: 50px;
+}
+
+.card-wrapper > .footer {
+  box-sizing: border-box;
+  padding: 0 12px 0 12px;
+}
+
+.card-wrapper > .footer > .like-message {
+}
+
+.card-wrapper > .footer > .descriptions > .name {
+  margin-right: 6px;
+  font-weight: 600;
+}
+
+.card-wrapper > .footer > .descriptions > .more-text {
+  margin-left: 6px;
+  font-weight: 600;
+}
+
+.card-wrapper > .footer > .more-comment {
+}
