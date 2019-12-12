@@ -1,0 +1,66 @@
+.card-wrapper {
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  padding: 12px;
+  background-color: #fff;
+  margin-bottom: 8px;
+}
+
+.card-wrapper > .card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.card-wrapper > .card-header > .card-profile {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 40px;
+  margin-right: 6px;
+}
+
+.card-wrapper > .card-header > .card-name {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-wrapper > .card-header > .card-name > .name {
+  color: #222;
+  margin-bottom: 2px;
+  font-size: 15px;
+}
+
+.card-wrapper > .card-header > .card-name > .time {
+  color: #888;
+  font-size: 12px;
+}
+
+.card-wrapper > .card-description-wrapper {
+  width: 100%;
+  min-height: 50px;
+  margin-bottom: 6px;
+}
+
+.card-wrapper > .card-description-wrapper > .card-description {
+  font-size: 14px;
+  color: #222;
+  line-height: 1.6;
+}
+
+.card-wrapper > .card-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-wrapper > .card-footer > .card-likes {
+  font-size: 14px;
+  color: #888;
+}
+
+.card-wrapper > .card-footer > .card-comments {
+  font-size: 14px;
+  color: #888;
+}
