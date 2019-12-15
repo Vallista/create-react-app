@@ -1,68 +1,57 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Get Weather API
 
-## Available Scripts
+## Weather API
 
-In the project directory, you can run:
+[https://home.openweathermap.org/](https://home.openweathermap.org/)에서 날씨 정보 가져와서 구현
+[https://namjackson.tistory.com/27](https://namjackson.tistory.com/27) 날씨 가져오는 법 참고
 
-### `yarn start`
+## React Life Cycle
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+리액트 라이프사이클은 여러가지가 있는데 사용하는 몇 가지는.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- componentDidMount() : 화면에 그려지고나서 호출
+- componentDidUpdate() : 컴포넌트가 갱신될 때 마다 호출
+- componentWillMount() : 화면에 그려지기 전 호출
+- componentWillReceiveProps() : Props 데이터가 변경되거나 삽입되었을 때 호출
+- componentWillUpdate() : 컴포넌트 갱신되기 전 호출
 
-### `yarn test`
+호출 순서
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+componentWillMount -> componentWillUpdate -> Render() -> componentDidMount -> componentDidUpdate
 
-### `yarn build`
+## Axios 모듈
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+axios.post() // Create
+axios.put() // Update
+axios.delete() // Delete
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### .then()
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+.then은 ES6에 적용된 비동기 처리를 위한 'Promise' 문법이다.
+ES6 이전에는 지원을 하지 못해서 BlueBirds 등 다양한 외부 라이브러리를 사용했지만, ES6 이후로 내장되었다.
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### REST API
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+REST API (통신 양식)
+CRUD = 표현한 것
+CRUD로 세상에 모든 걸 표현할 수 있다.
+Create = 생성, Read = 읽기, Update = 갱신, Delete = 삭제
+axios = REST API 방식으로 CRUD를 구현한 Node.js 네트워크 모듈
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### URL 생성 방식 
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+?q="+city+"&appid="+"내APIKEY"
+http://api.openweathermap.org/data/2.5/weather? <- ? 이후에 받는 애들은, 데이터이다.
+http://api.openweathermap.org/data/2.5/weather?q=city&appid=8d1ec898f40cd4ccdfd68aec10be083b
+q = city
+appid = 8d1ec898f40cd4ccdfd68aec10be083b
+{
+  q: 'city',
+  appid: '8d1ec898f40cd4ccdfd68aec10be083b'
+}
+? 이후에 들어간 데이터들을 => query string 이라고 표현.
 
-## Learn More
+### encodeURIComponent
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- 그냥 가져오면 깨지므로 encodeURIComponent를 사용
