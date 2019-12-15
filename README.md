@@ -35,23 +35,29 @@ ES6 이전에는 지원을 하지 못해서 BlueBirds 등 다양한 외부 라�
 ### REST API
 
 REST API (통신 양식)
-CRUD = 표현한 것
-CRUD로 세상에 모든 걸 표현할 수 있다.
-Create = 생성, Read = 읽기, Update = 갱신, Delete = 삭제
-axios = REST API 방식으로 CRUD를 구현한 Node.js 네트워크 모듈
+
+- CRUD = 표현한 것
+- CRUD로 세상에 모든 걸 표현할 수 있다.
+- Create = 생성, Read = 읽기, Update = 갱신, Delete = 삭제
+- axios = REST API 방식으로 CRUD를 구현한 Node.js 네트워크 모듈
 
 ### URL 생성 방식 
 
 ?q="+city+"&appid="+"내APIKEY"
 http://api.openweathermap.org/data/2.5/weather? <- ? 이후에 받는 애들은, 데이터이다.
 http://api.openweathermap.org/data/2.5/weather?q=city&appid=8d1ec898f40cd4ccdfd68aec10be083b
+
 q = city
 appid = 8d1ec898f40cd4ccdfd68aec10be083b
+
+```
 {
   q: 'city',
   appid: '8d1ec898f40cd4ccdfd68aec10be083b'
 }
-? 이후에 들어간 데이터들을 => query string 이라고 표현.
+```
+
+- ? 이후에 들어간 데이터들을 => query string 이라고 표현.
 
 ### encodeURIComponent
 
