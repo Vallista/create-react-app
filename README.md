@@ -3,6 +3,7 @@
 ## Weather API
 
 [https://home.openweathermap.org/](https://home.openweathermap.org/)에서 날씨 정보 가져와서 구현
+
 [https://namjackson.tistory.com/27](https://namjackson.tistory.com/27) 날씨 가져오는 법 참고
 
 ## React Life Cycle
