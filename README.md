@@ -55,3 +55,9 @@ appid = 8d1ec898f40cd4ccdfd68aec10be083b
 ### encodeURIComponent
 
 - 그냥 가져오면 깨지므로 encodeURIComponent를 사용
+
+## ETC
+
+- 절대온도: 전세계 온도 공통 규칙
+- 섭씨온도: 한국에서 많이쓰는 온도 규칙 :: 절대온도 - 273 하면 값 나옴
+- 화씨온도: 외국에서 많이쓰는 온도 규칙 :: 공식 있음.
